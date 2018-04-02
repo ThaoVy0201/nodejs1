@@ -7,14 +7,13 @@
   <title>Document</title>
 </head>
 <body>
+  <%- include('./partials/header.ejs'); %>
   <h1>Khoa Pham</h1>
+  <% words.forEach( w => { const {en, vn} = w; %>
+    <%- include('./partials/row.ejs', w); %>
+  <% }); %>
+  <%- include('./partials/footer.ejs'); %>
 
-  <% words.forEach( w => { %>
-    <div>
-      <h3><%= w.en %></h3>
-      <p><%= w.vn %></p>
-    </div>
-  <% }) %>
 </body>
 </html>
 <script src="reload/reload.js"></script>

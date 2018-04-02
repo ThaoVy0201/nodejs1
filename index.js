@@ -2,6 +2,7 @@ const express = require('express');
 const reload = require('reload');
 const app = express();
 
+app.locals.VALUE = 2018;
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
